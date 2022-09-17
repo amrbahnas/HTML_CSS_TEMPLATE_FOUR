@@ -1,0 +1,632 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+
+    --main-color: #553328;
+    --second-color: #b36955;
+    --back-box: #332219;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #1f1710;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h2.title {
+    font-size: 50px;
+    text-transform: capitalize;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+/* <!-- start landing --> */
+
+.landing .container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+}
+
+.landing .container nav .logo i {
+    color: white;
+    font-size: 50px;
+}
+
+.landing .container nav ul:first-of-type {
+    flex: 1;
+    text-align: center;
+}
+
+.landing .container nav ul:first-of-type li {
+    margin-right: 40px;
+}
+
+.landing .container nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+}
+
+.landing .container nav ul li.special {
+    border: 3px solid var(--main-color);
+    padding: 5px 20px;
+    border-radius: 30px;
+}
+
+.landing .container nav ul li.special:hover {
+    background-color: var(--second-color);
+}
+
+.landing .container nav ul li.special a:hover {
+    text-decoration: none;
+}
+
+.landing .container nav ul li a {
+    text-transform: capitalize;
+}
+
+.landing .container nav ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--second-color);
+    text-underline-offset: 10px;
+}
+
+.landing .container .content {
+    display: flex;
+    align-items: center;
+    height: 60vh;
+    padding-bottom: 50px;
+}
+
+
+.landing .container .content .image {
+    flex: 1;
+    text-align: center;
+}
+
+.landing .container .content .image img {
+    max-width: 100%;
+    box-shadow: 0px 0px 60px #482d24;
+    border-radius: 10px;
+}
+
+.landing .container .content .text {
+    flex: 1;
+    color: white;
+}
+
+.landing .container .content .text h2 {
+    font-size: 80px;
+
+}
+
+.landing .container .content .text p {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 60px;
+}
+
+.landing .container .content .text a {
+    padding: 5px 20px;
+    border: 3px solid var(--main-color);
+    border-radius: 30px;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.landing .container .content .text a:hover {
+    background-color: var(--second-color);
+}
+
+.landing .container .scrolling {
+    position: relative;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.landing .container .scrolling::after {
+    position: absolute;
+    content: "1";
+    color: var(--second-color);
+    top: 50px;
+    font-weight: bold;
+}
+
+.landing .container .scrolling span {
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+}
+
+.landing .container .scrolling span.special {
+    width: 100px;
+    background-color: var(--second-color);
+}
+
+/* <!-- end landing --> */
+
+/* start service  */
+.service {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+
+.service .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.service .box {
+    padding: 5px;
+    border: 3px solid var(--main-color);
+    border-radius: 10px;
+    background-color: var(--back-box);
+}
+
+.service .box .image {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.service .box .image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.service .box .bottom p {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.service .box .bottom span {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin: 20px auto;
+    border: 3px solid var(--second-color);
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.service .box .bottom span:hover {
+    background-color: var(--second-color);
+}
+
+/* end service */
+
+
+/* start about */
+.about {
+    padding-top: 50px;
+    padding-bottom: 50PX;
+}
+
+.about .container {
+    display: flex;
+}
+
+.about .container .image {
+    flex: 1;
+}
+
+.about .container .image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.about .container .text {
+    flex: 1;
+    background-color: var(--back-box);
+    border: 3px solid var(--second-color);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.about .container .text h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about .container .text p {
+    color: white;
+    line-height: 1.8;
+
+}
+
+.about .container .text a {
+    display: block;
+    padding: 10px 20px;
+    border: 4px solid var(--main-color);
+    width: fit-content;
+    margin-top: 20px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.about .container .text a:hover {
+    background-color: var(--second-color);
+}
+
+/* end about */
+
+/* start common  */
+.common .container>div {
+    background-color: var(--back-box);
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    border: 3px solid var(--main-color);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.common .container>div:not(div.special)::after {
+    position: absolute;
+    content: "+";
+    background-color: var(--second-color);
+    height: calc(100% + 6px);
+    width: 70px;
+    right: -3px;
+    top: -3px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.common .container>div p {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.common .container>div.special {
+    padding-right: 70px;
+}
+
+.common .container>div.special p:nth-child(2) {
+    font-weight: 400;
+    line-height: 1.8;
+    text-transform: capitalize;
+    font-size: 14px;
+    margin-top: 10px;
+    color: rgb(198, 197, 197);
+}
+
+.common .container>div.special::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 5px;
+    right: 20px;
+    top: 20px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* end common  */
+
+
+/* START CONTACT */
+.contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contact .container {
+    background-color: var(--back-box);
+    border: 3px solid var(--main-color);
+    border-radius: 10px;
+
+    padding: 40px;
+}
+
+.contact .container h2 {
+    text-align: left;
+}
+
+.contact .container .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact .container .contact-container .contact-info {
+    flex-basis: 20%;
+}
+
+
+.contact .container .contact-container .contact-info h3 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact .container .contact-container .contact-info p {
+    color: rgb(198, 197, 197);
+    margin-bottom: 20px;
+}
+
+.contact .container .contact-container .form {
+    flex-basis: 50%;
+}
+
+.contact .container .contact-container .form input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid var(--main-color);
+    padding: 10px 10px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.contact .container .contact-container .form input:focus {
+    outline: none;
+}
+
+.contact .container .contact-container .form input::placeholder {
+    color: rgb(198, 197, 197);
+}
+
+.contact .container .contact-container .form input[type="submit"] {
+    border: 3px solid var(--main-color);
+    border-radius: 15px;
+    width: fit-content;
+    padding: 10px 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.contact .container .contact-container .form input[type="submit"]:hover {
+    background-color: var(--second-color);
+
+}
+
+.contact .container .contact-container .social {
+    flex-basis: 10%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 20px;
+    height: 340px;
+}
+
+.contact .container .contact-container .social::before {
+    position: absolute;
+    content: "";
+    width: 2px;
+    height: 150px;
+    background-color: var(--main-color);
+    top: 45%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.contact .container .contact-container .social i {
+    color: white;
+    background-color: var(--back-box);
+    border: 3px solid var(--main-color);
+    padding: 10px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.contact .container .contact-container .social i:hover {
+    background-color: var(--second-color);
+}
+
+/* END CONTACT */
+
+/* start brands  */
+.brands {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.brands .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+
+.brands .container .box {
+    flex-basis: 20%;
+    background-color: var(--back-box);
+    border: 3px solid var(--main-color);
+    border-radius: 10px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 245px;
+}
+
+.brands .container .box img {
+    max-width: 100%;
+}
+
+/* end brands  */
+
+/* start footer */
+footer {
+    padding-top: 40px;
+    border-top: 2px solid var(--main-color);
+
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .container h3 {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+footer .container ul li {
+    margin-bottom: 10px;
+}
+
+footer .container ul li a {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+
+footer .container .aroma .icon,
+footer .container .aroma .footer-socail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .container .aroma .icon i {
+    display: block;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+footer .container .aroma .footer-socail i {
+    margin-right: 5px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+footer .container .subscribe p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer .container .subscribe .email-field {
+    position: relative;
+
+}
+
+footer .container .subscribe .email-field::after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f002";
+    right: 15px;
+    top: 9px;
+    cursor: pointer;
+    color: white;
+}
+
+footer .container .subscribe input {
+    background-color: transparent;
+    border: 3px solid var(--main-color);
+    padding: 5px 20px;
+    width: 100%;
+    color: white;
+}
+
+footer .container .subscribe input::placeholder {
+    color: white;
+    font-size: 12px;
+}
+
+footer .container .subscribe input:focus {
+    outline: none;
+}
+
+footer>p {
+    color: white;
+    text-align: center;
+    border-top: 2px solid var(--main-color);
+    padding: 20px 0;
+}
+
+/* end footer */
