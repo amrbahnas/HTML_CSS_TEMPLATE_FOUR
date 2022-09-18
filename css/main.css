@@ -73,7 +73,7 @@ h2.title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 15vh;
+    padding-top: 20px;
 }
 
 .landing .container nav .logo i {
@@ -164,7 +164,7 @@ h2.title {
 .landing .container .content {
     display: flex;
     align-items: center;
-    height: 70vh;
+    height: 75vh;
     padding-bottom: 50px;
 }
 
