@@ -34,7 +34,7 @@ a {
 }
 
 h2.title {
-    font-size: 50px;
+    font-size: 40px;
     text-transform: capitalize;
     color: white;
     text-align: center;
@@ -81,17 +81,23 @@ h2.title {
     font-size: 50px;
 }
 
-.landing .container nav ul:first-of-type {
-    flex: 1;
-    text-align: center;
+.landing .container nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 25%;
 }
 
-.landing .container nav ul:first-of-type li {
-    margin-right: 40px;
+
+
+
+
+.landing .container nav ul:first-of-type {
+    flex-basis: 50%;
+    justify-content: space-between;
 }
 
 .landing .container nav ul li {
-    display: inline-block;
     margin-right: 10px;
     color: white;
 }
@@ -120,6 +126,41 @@ h2.title {
     text-underline-offset: 10px;
 }
 
+.landing .container nav>i {
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+.landing .menu {
+    position: fixed;
+    height: 100vh;
+    background-color: var(--second-color);
+    width: 50%;
+    right: -1000px;
+    transition: 0.5s;
+    z-index: 1000;
+    padding: 30px 20px;
+    opacity: 0.9;
+}
+
+.landing .menu li {
+    padding: 20px;
+    color: white;
+    margin: 10px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+@media (max-width:768px) {
+    .landing .container nav>i {
+        display: block;
+    }
+
+    .landing .container nav ul {
+        display: none;
+    }
+}
+
 .landing .container .content {
     display: flex;
     align-items: center;
@@ -132,6 +173,13 @@ h2.title {
     flex: 1;
     text-align: center;
 }
+
+@media (max-width:768px) {
+    .landing .container .content .image {
+        display: none;
+    }
+}
+
 
 .landing .container .content .image img {
     max-width: 100%;
@@ -192,6 +240,23 @@ h2.title {
     background-color: white;
 }
 
+@media (max-width:768px) {
+
+    .landing .container .scrolling {
+        display: none;
+    }
+
+    .landing .container .content {
+        height: 80vh;
+        padding: 10px;
+    }
+
+    .landing .container .content p {
+        line-height: 1.8;
+        font-size: 24px !important;
+    }
+}
+
 .landing .container .scrolling span.special {
     width: 100px;
     background-color: var(--second-color);
@@ -218,6 +283,12 @@ h2.title {
     border: 3px solid var(--main-color);
     border-radius: 10px;
     background-color: var(--back-box);
+    transition: 0.3s;
+}
+
+
+.service .box:hover {
+    transform: translateY(-10px);
 }
 
 .service .box .image {
@@ -225,11 +296,12 @@ h2.title {
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .service .box .image img {
     max-width: 100%;
-    max-height: 100%;
+    height: 470px;
 }
 
 .service .box .bottom p {
@@ -272,6 +344,12 @@ h2.title {
 
 .about .container .image {
     flex: 1;
+}
+
+@media (max-width:768px) {
+    .about .container .image {
+        display: none;
+    }
 }
 
 .about .container .image img {
@@ -349,12 +427,9 @@ h2.title {
     color: white;
     text-transform: uppercase;
     font-weight: bold;
+    width: 80%;
 }
 
-
-.common .container>div.special {
-    padding-right: 70px;
-}
 
 .common .container>div.special p:nth-child(2) {
     font-weight: 400;
@@ -391,8 +466,13 @@ h2.title {
     background-color: var(--back-box);
     border: 3px solid var(--main-color);
     border-radius: 10px;
-
     padding: 40px;
+}
+
+@media (max-width:768px) {
+    .contact .container {
+        border: none;
+    }
 }
 
 .contact .container h2 {
@@ -403,6 +483,12 @@ h2.title {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media (max-width:768px) {
+    .contact .container .contact-container {
+        flex-direction: column;
+    }
 }
 
 .contact .container .contact-container .contact-info {
@@ -425,6 +511,13 @@ h2.title {
 
 .contact .container .contact-container .form {
     flex-basis: 50%;
+}
+
+@media (max-width:768px) {
+    .contact .container .contact-container .form {
+        width: 100%;
+        margin-top: 20px;
+    }
 }
 
 .contact .container .contact-container .form input {
@@ -482,6 +575,17 @@ h2.title {
     left: 0;
 }
 
+@media (max-width:768px) {
+    .contact .container .contact-container .social {
+        margin-top: 15px;
+        flex-direction: row;
+    }
+
+    .contact .container .contact-container .social::before {
+        display: none;
+    }
+}
+
 .contact .container .contact-container .social i {
     color: white;
     background-color: var(--back-box);
@@ -509,6 +613,12 @@ h2.title {
     justify-content: center;
     align-items: center;
     gap: 35px;
+}
+
+@media (max-width:768px) {
+    .brands .container {
+        flex-direction: column;
+    }
 }
 
 .brands .container .box {
@@ -544,6 +654,17 @@ footer .container {
     justify-content: center;
 }
 
+@media (max-width:768px) {
+    footer .container>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
 footer .container h3 {
     color: white;
     text-transform: uppercase;
@@ -561,11 +682,13 @@ footer .container ul li a {
 }
 
 
+
 footer .container .aroma .icon,
 footer .container .aroma .footer-socail {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 footer .container .aroma .icon i {
