@@ -248,6 +248,7 @@ h2.title {
 
     .landing .container .content {
         padding: 10px;
+        height: 77vh;
     }
 
     .landing .container .content p {
