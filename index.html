@@ -15,6 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- antimation scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
 </head>
 
@@ -76,9 +78,9 @@
         <h2 class="title">our service</h2>
         <div class="container">
             <!-- start box -->
-            <div class="box">
+            <div class="box" data-aos="fade-right">
                 <div class="image">
-                    <img src="img/coffe1.jpg" alt="">
+                    <img src="img/coffe1.png" alt="">
                 </div>
                 <div class="bottom">
                     <p>COFFEE AND TEA</p>
@@ -87,9 +89,9 @@
             </div>
             <!-- end box -->
             <!-- start box -->
-            <div class="box">
+            <div class="box" data-aos="fade-up">
                 <div class="image">
-                    <img src="img/coffe2.jpg" alt="">
+                    <img src="img/coffe2.png" alt="">
                 </div>
                 <div class="bottom">
                     <p>BREWERS EQUIPMENT</p>
@@ -98,9 +100,9 @@
             </div>
             <!-- end box -->
             <!-- start box -->
-            <div class="box">
+            <div class="box" data-aos="fade-down">
                 <div class="image">
-                    <img src="img/coffe3.jpg" alt="">
+                    <img src="img/coffe3.png" alt="">
                 </div>
                 <div class="bottom">
                     <p>PAPER, JANITORIAL</p>
@@ -109,9 +111,9 @@
             </div>
             <!-- end box -->
             <!-- start box -->
-            <div class="box">
+            <div class="box" data-aos="fade-left">
                 <div class="image">
-                    <img src="img/coffe2.jpg" alt="">
+                    <img src="img/coffe2.png" alt="">
                 </div>
                 <div class="bottom">
                     <p>FOOD & BEVERAGE</p>
@@ -205,14 +207,14 @@
     <div class="brands" id="brands">
         <h2 class="title">AUTHORIZED DISTRIBUTOR COFFEE BRANDS</h2>
         <div class="container">
-            <div class="box">
-                <img src="img/brandone.png" alt="">
+            <div class="box" data-aos="fade-up">
+                <img src="img/brandone.png" alt="" data-aos="flip-left">
             </div>
             <div class="box">
-                <img src="img/brandtwo.png" alt="">
+                <img src="img/brandtwo.png" alt="" data-aos="flip-down">
             </div>
             <div class="box">
-                <img src="img/brandthree.png" alt="">
+                <img src="img/brandthree.png" alt="" data-aos="flip-right">
             </div>
         </div>
     </div>
@@ -262,6 +264,12 @@
     </footer>
     <!--end footer -->
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2500, once: true
+        });
+    </script>
 </body>
 
 </html>
