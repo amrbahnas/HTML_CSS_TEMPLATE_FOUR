@@ -20,6 +20,7 @@ html {
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #1f1710;
+
 }
 
 ul {
@@ -273,8 +274,6 @@ h2.title {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-
-
 
 .service .container {
     display: grid;
